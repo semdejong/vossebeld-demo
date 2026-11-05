@@ -1,26 +1,167 @@
 @import "tailwindcss";
 
 :root {
-  --brand: #1d4ed8;
-  --brand-fg: #ffffff;
-  --accent: #f59e0b;
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --muted: #f1f5f9;
+  --basalt: #26292b;
+  --straatzand: #ece3cf;
+  --voeg: #d8c9a7;
+  --klinker: #9a4a2c;
+  --merk: #2e7d32;
+  --wit: #fbf8f1;
+  --aarde: #6b4330;
+  --zandlaag: #e6d4a8;
+  --turf: #3e5140;
+  --joint: #c4b48a;
 }
 
 @theme inline {
-  --color-brand: var(--brand);
-  --color-brand-fg: var(--brand-fg);
-  --color-accent: var(--accent);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --color-basalt: var(--basalt);
+  --color-straatzand: var(--straatzand);
+  --color-voeg: var(--voeg);
+  --color-klinker: var(--klinker);
+  --color-merk: var(--merk);
+  --color-wit: var(--wit);
+  --color-aarde: var(--aarde);
+  --color-zandlaag: var(--zandlaag);
+  --color-turf: var(--turf);
+  --color-brand: var(--klinker);
+  --color-brand-fg: #ffffff;
+  --color-background: var(--straatzand);
+  --color-foreground: var(--basalt);
+  --color-muted: var(--voeg);
+  --font-sans: var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--straatzand);
+  color: var(--basalt);
   font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+:focus-visible {
+  outline: 2px solid var(--basalt);
+  outline-offset: 3px;
+}
+
+.bg-klinker:focus-visible,
+.bg-basalt:focus-visible {
+  outline-color: var(--wit);
+}
+
+::selection {
+  background: var(--klinker);
+  color: #fff;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  background: var(--wit);
+  color: var(--basalt);
+  border: 1px solid var(--basalt);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-display), sans-serif;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Paving bonds — low contrast, sample-board scale */
+.bond-keper {
+  background-color: var(--straatzand);
+  background-image: url("/patterns/keper.svg");
+  background-size: 72px 72px;
+}
+
+.bond-half {
+  background-color: var(--straatzand);
+  background-image:
+    linear-gradient(to right, var(--joint) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--joint) 1px, transparent 1px);
+  background-size: 48px 16px, 48px 32px;
+  background-position: 0 0, 0 0;
+}
+
+.bond-half {
+  background-image:
+    linear-gradient(var(--joint), var(--joint)),
+    linear-gradient(var(--joint), var(--joint)),
+    linear-gradient(to bottom, var(--joint) 1px, transparent 1px);
+  background-size:
+    1px 16px,
+    1px 16px,
+    100% 16px;
+  background-position:
+    0 0,
+    24px 16px,
+    0 0;
+  background-repeat: repeat;
+}
+
+.bond-tegel {
+  background-color: var(--straatzand);
+  background-image:
+    linear-gradient(to right, var(--joint) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--joint) 1px, transparent 1px);
+  background-size: 36px 18px;
+}
+
+.bond-blok {
+  background-color: var(--straatzand);
+  background-image:
+    linear-gradient(to right, var(--joint) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--joint) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.bond-wild {
+  background-color: var(--voeg);
+  background-image: url("/patterns/wild.svg");
+  background-size: 120px 64px;
+}
+
+/* Doorsnede: layers slide in once */
+@media (prefers-reduced-motion: no-preference) {
+  .doorsnede.is-in .layer {
+    animation: layer-in 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .doorsnede.is-in .layer:nth-child(4) { animation-delay: 0ms; }
+  .doorsnede.is-in .layer:nth-child(3) { animation-delay: 90ms; }
+  .doorsnede.is-in .layer:nth-child(2) { animation-delay: 180ms; }
+  .doorsnede.is-in .layer:nth-child(1) { animation-delay: 270ms; }
+}
+
+@keyframes layer-in {
+  from { transform: translateX(-36px); }
+  to { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .doorsnede.is-in .layer { animation: none; }
+}
+
+.gallery-item {
+  content-visibility: auto;
+  contain-intrinsic-size: 240px;
 }

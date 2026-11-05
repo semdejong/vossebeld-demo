@@ -1,102 +1,173 @@
 /**
- * ÉÉN bestand om aan te passen per demo.
- * Kopieer de starter, vul hieronder de gegevens van de prospect in, klaar.
+ * Bedrijfsgegevens en kleuren voor de demo van Hoveniersbedrijf Vossebeld.
+ * Slug blijft gelijk: die hoort bij de Sleads demo-analytics tracker.
  */
 export const content = {
-  // Slug = Vercel-project- en GitHub-reponaam (eindigt op "-demo"). Wordt door scripts/new-demo.sh gezet.
-  // Ook de "data-demo" voor de Sleads demo-analytics tracker.
   slug: "vossebeld-demo",
 
   company: {
-    name: "Voorbeeldbedrijf",
-    tagline: "Vakmanschap uit de regio, sinds 1998",
+    name: "Hoveniersbedrijf Vossebeld",
+    owner: "Peter Vossebeld",
+    tagline: "Van idee tot tuin",
     description:
-      "Wij helpen particulieren en bedrijven met betrouwbaar werk, eerlijk advies en een persoonlijke aanpak.",
-    logo: "/logo.png", // zet het logo in /public en pas het pad aan ("" = alleen tekst)
-    city: "Utrecht",
+      "Ik ben Peter Vossebeld, hovenier in Haaksbergen. Ontwerp, aanleg, onderhoud, renovatie, sierbestrating en kunstgras. Eén aanspreekpunt, van de eerste schets tot de laatste plant. TuinKeur gecertificeerd.",
+    logo: "/logo_vossebeld_index.png",
+    logoFooter: "/logo_vossebeld_footer.png",
+    portrait: "/img/peter_vossebeld.png",
+    city: "Haaksbergen",
+    founded: "2013",
+    region: "voornamelijk Oost Nederland (Twente en Achterhoek)",
+    regionLabel: "Haaksbergen · Twente en Achterhoek",
   },
 
-  // Huisstijlkleuren van de prospect (hex)
   colors: {
-    primary: "#1d4ed8",
+    primary: "#9a4a2c",
     primaryForeground: "#ffffff",
-    accent: "#f59e0b",
-    background: "#ffffff",
-    foreground: "#0f172a",
-    muted: "#f1f5f9",
+    accent: "#2e7d32",
+    background: "#ece3cf",
+    foreground: "#26292b",
+    muted: "#d8c9a7",
+    panel: "#fbf8f1",
+    aarde: "#6b4330",
+    zandlaag: "#e6d4a8",
+    turf: "#3e5140",
   },
 
   seo: {
-    title: "Voorbeeldbedrijf | Vakmanschap uit Utrecht",
-    description: "Conceptwebsite voor Voorbeeldbedrijf.",
+    title: "Hoveniersbedrijf Vossebeld | Hovenier in Haaksbergen",
+    description:
+      "Peter Vossebeld, hovenier in Haaksbergen. Ontwerp, aanleg, onderhoud, renovatie, sierbestrating en kunstgras in Twente en de Achterhoek. TuinKeur gecertificeerd. Van idee tot tuin.",
     lang: "nl",
   },
 
-  nav: [
-    { label: "Diensten", href: "#diensten" },
-    { label: "Over ons", href: "#over-ons" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Contact", href: "#contact" },
+  contact: {
+    phoneDisplay: "06-10547298",
+    phoneTel: "tel:+31610547298",
+    email: "info@hoveniersbedrijfvossebeld.nl",
+    address: "Maatkamp 1, 7482 KC Haaksbergen",
+    linkedin: "https://nl.linkedin.com/pub/peter-vossebeld/19/921/928",
+    hoursNote: "Bel of mail gerust.",
+  },
+
+  tuinkeur: {
+    mark: "/img/Tuinkeur.png",
+    certified: "/img/tuinkeur_gecertificeerd_100.png",
+    intro:
+      "TuinKeur is een onafhankelijk keurmerk. Het schept duidelijkheid in het aanbod van hoveniers. Hoveniersbedrijf Vossebeld is TuinKeur gecertificeerd. Daarmee biedt ik u vijf zekerheden.",
+    zekerheden: [
+      {
+        title: "Professionaliteit",
+        text: "Een hovenier met het TuinKeur-keurmerk is gecheckt op ruim 120 punten. Het bedrijf en de bedrijfsvoering worden als geheel bekeken.",
+      },
+      {
+        title: "Betrokkenheid",
+        text: "U staat voorop. Dat merkt u aan de persoonlijke benadering, aan een heldere offerte die laat zien welke werkzaamheden erin zitten, en aan de algemene voorwaarden die daarbij horen.",
+      },
+      {
+        title: "Vakbekwaamheid",
+        text: "Ik heb de vakkennis om een aanvraag goed uit te voeren. Tijdens het werk, en ook daarna, kunt u op die kennis terugvallen.",
+      },
+      {
+        title: "Service",
+        text: "Ik kom mijn afspraken na. Na de aanleg mag u rekenen op nazorg.",
+      },
+      {
+        title: "Kwaliteit",
+        text: "Goede kwaliteit in het materiaal en in het werk. Loopt er iets niet zoals het moet, dan zet ik me in om het op te lossen. Komt u er met mij niet uit, dan bemiddelt TuinKeur.",
+      },
+    ],
+  },
+
+  services: [
+    {
+      href: "/ontwerp",
+      title: "Ontwerp",
+      bond: "tegelverband",
+      line: "Vrijblijvende kennismaking, een schets en een tekening met maatvoering.",
+    },
+    {
+      href: "/aanleg",
+      title: "Aanleg",
+      bond: "halfsteens",
+      line: "Van inmeten tot de laatste plant, in vier fases, volgens afspraak.",
+    },
+    {
+      href: "/onderhoud",
+      title: "Onderhoud",
+      bond: "elleboog",
+      line: "Blad, onkruid, snoei, maaien en borders. Een tuin die bijblijft.",
+    },
+    {
+      href: "/renovatie",
+      title: "Renovatie",
+      bond: "wildverband",
+      line: "Van een kleine aanpassing tot een ingrijpende verandering. Eerst een degelijk ontwerp.",
+    },
+    {
+      href: "/sierbestrating",
+      title: "Sierbestrating",
+      bond: "keper",
+      line: "Van beton tot natuursteen. U kiest de tegels, ik werk het straatwerk af.",
+    },
+    {
+      href: "/kunstgras",
+      title: "Kunstgras",
+      bond: "blokverband",
+      line: "Complete levering en aanleg, ook bij schaduw, op een balkon of een dakterras.",
+    },
   ],
 
-  hero: {
-    title: "Vakwerk waar u op kunt bouwen",
-    subtitle:
-      "Snel geregeld, duidelijk geprijsd en netjes opgeleverd. Vraag vandaag nog vrijblijvend een offerte aan.",
-    primaryCta: { label: "Offerte aanvragen", href: "#contact" },
-    secondaryCta: { label: "Bekijk onze diensten", href: "#diensten" },
-    image: "", // bv. "/hero.jpg" in /public of een externe URL; leeg = kleurverloop
-    highlights: ["25+ jaar ervaring", "Gratis advies aan huis", "Garantie op al ons werk"],
-  },
+  styles: ["Landelijk", "Romantisch", "Klassiek", "Strak en modern", "Speels en levendig"],
 
-  services: {
-    title: "Onze diensten",
-    intro: "Alles onder één dak, van eerste advies tot oplevering.",
-    items: [
-      { icon: "🛠️", title: "Dienst één", text: "Korte omschrijving van wat deze dienst inhoudt en wat de klant eraan heeft." },
-      { icon: "📐", title: "Dienst twee", text: "Korte omschrijving van wat deze dienst inhoudt en wat de klant eraan heeft." },
-      { icon: "✅", title: "Dienst drie", text: "Korte omschrijving van wat deze dienst inhoudt en wat de klant eraan heeft." },
+  phases: [
+    {
+      key: "zand",
+      name: "Zand",
+      title: "Inmeten",
+      text: "Uw tuin wordt ingemeten, zodat bekend is waar het terras, het gazon en de eventuele paden komen.",
+    },
+    {
+      key: "aarde",
+      name: "Aarde",
+      title: "Grondwerk",
+      text: "Bij een bestaande tuin gaan oude planten en het oude straatwerk eruit. De grond wordt bewerkt en klaargemaakt. Denk aan glooien en een goede bemesting.",
+    },
+    {
+      key: "straat",
+      name: "Straatlaag",
+      title: "Bestratingen en tuinafscheidingen",
+      text: "De paden en terrassen worden bestraat en de schuttingen geplaatst. In deze fase ziet u al hoe de verhoudingen worden.",
+    },
+    {
+      key: "groen",
+      name: "Groen",
+      title: "Beplanting en gazon",
+      text: "Tot slot wordt het (kunst)gras gelegd of gezaaid. Bomen, struiken en planten krijgen volgens het beplantingsplan een plek.",
+    },
+  ],
+
+  onderhoud: [
+    "Bladruimen",
+    "Onkruidvrij maken",
+    "Heesters en struiken snoeien",
+    "Bomen snoeien",
+    "Bomen kappen",
+    "Gras maaien",
+    "Beplanten",
+    "Border onderhoud",
+  ],
+
+  vorm: {
+    werkzaamheden: [
+      { id: "ontwerp", label: "Ontwerp" },
+      { id: "aanleg", label: "Aanleg" },
+      { id: "onderhoud", label: "Onderhoud" },
+      { id: "renovatie", label: "Renovatie" },
+      { id: "sierbestrating", label: "Sierbestrating" },
+      { id: "kunstgras", label: "Kunstgras" },
     ],
   },
+} as const;
 
-  about: {
-    title: "Over ons",
-    text: [
-      "Wat begon als een klein familiebedrijf is uitgegroeid tot een vertrouwd adres in de regio.",
-      "We werken met vaste vakmensen, houden ons aan afspraken en staan ook na de oplevering voor u klaar.",
-    ],
-    image: "", // optioneel
-    stats: [
-      { value: "25+", label: "jaar ervaring" },
-      { value: "1.200+", label: "tevreden klanten" },
-      { value: "9,2", label: "gemiddeld cijfer" },
-    ],
-  },
-
-  reviews: {
-    title: "Wat klanten zeggen",
-    items: [
-      { name: "Familie Jansen", text: "Netjes en snel gewerkt, precies volgens afspraak. Echt een aanrader!", rating: 5 },
-      { name: "Petra de Vries", text: "Duidelijke communicatie en een eerlijke prijs. We komen zeker terug.", rating: 5 },
-      { name: "Mark Bakker", text: "Vakkundig advies en mooi resultaat. Heel tevreden.", rating: 5 },
-    ],
-  },
-
-  contact: {
-    title: "Neem contact op",
-    text: "Bel, mail of kom langs. We reageren binnen één werkdag.",
-    phone: "030 123 45 67",
-    email: "info@voorbeeldbedrijf.nl",
-    address: "Voorbeeldstraat 1, 1234 AB Utrecht",
-    openingHours: ["Ma t/m vr: 08:00 – 17:30", "Za: 09:00 – 13:00"],
-    whatsapp: "", // bv. "31612345678" (zonder +)
-    cta: { label: "Bel direct", href: "tel:0301234567" },
-  },
-
-  footer: {
-    kvk: "", // bv. "KvK 12345678"
-    socials: [] as { label: string; href: string }[],
-  },
-};
-
-export type Content = typeof content;
+export type BondId = (typeof content.services)[number]["bond"];
+export type PhaseKey = (typeof content.phases)[number]["key"];

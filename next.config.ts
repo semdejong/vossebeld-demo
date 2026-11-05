@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      { source: "/index.php", destination: "/", permanent: true },
+      { source: "/bedrijf.php", destination: "/over-peter", permanent: true },
+      { source: "/diensten.php", destination: "/aanleg", permanent: true },
+      { source: "/projecten.php", destination: "/projecten", permanent: true },
+      { source: "/contact.php", destination: "/contact", permanent: true },
+      { source: "/index.html", destination: "/", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
