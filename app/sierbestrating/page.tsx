@@ -1,7 +1,9 @@
+import Bladwijzer from "@/components/Bladwijzer";
+import BondSwatch from "@/components/BondSwatch";
 import ContactForm from "@/components/ContactForm";
 import Gallery from "@/components/Gallery";
 import PhotoFrame from "@/components/PhotoFrame";
-import BondSwatch from "@/components/BondSwatch";
+import SpecRows from "@/components/SpecRows";
 import type { BondId } from "@/content";
 import { content } from "@/content";
 import { projects } from "@/lib/projects";
@@ -16,6 +18,26 @@ export const metadata: Metadata = {
 
 const photos = projects.filter((p) => p.category === "sierbestrating");
 const hero = photos.find((p) => p.src.endsWith("bestrating005.jpg")) ?? photos[0];
+const detail = photos.find((p) => p.src.endsWith("bestrating006.jpg"))!;
+
+const materialen = [
+  {
+    label: "Beton",
+    text: "Strak in maat. Rustig van kleur, of een tint die bij de gevel past. Goed te leggen in halfsteens, keper of elleboog.",
+  },
+  {
+    label: "Natuursteen",
+    text: "Ongelijker en levendiger. Vaak in wildverband, als de maten het toelaten. De afwerking blijft tot in de puntjes.",
+  },
+  {
+    label: "Uw tegel",
+    text: "Alles daartussen bespreken we aan de hand van de tegel die u mooi vindt. Formaat, kleur en voeg bepalen de sfeer.",
+  },
+  {
+    label: "Waar het komt",
+    text: "Een pad, een terras of een oprit. Ook de aansluiting op gevel, border of gazon hoort bij het straatwerk.",
+  },
+];
 
 const verbanden: { bond: BondId; title: string; text: string }[] = [
   {
@@ -110,7 +132,25 @@ export default function SierbestratingPage() {
         </div>
       </section>
 
-      <section data-section="verbanden" className="border-t border-voeg bg-wit">
+      <section data-section="materialen" className="border-t border-voeg bg-wit">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-12 items-start gap-8 px-5 py-16">
+          <div className="col-span-12 lg:col-span-5">
+            <p className="font-mono text-[11px] tracking-[0.16em] uppercase">Materiaal · van beton tot natuursteen</p>
+            <h2 className="mt-3 text-4xl">De steen die u mooi vindt</h2>
+            <p className="mt-4">
+              Eerst de sfeer, dan de tegel die u mooi vindt, dan het verband dat daarbij past.
+            </p>
+            <div className="mt-8">
+              <PhotoFrame src={detail.src} alt={detail.alt} width={detail.width} height={detail.height} caption={detail.sheet} sizes="(max-width: 1024px) 100vw, 480px" />
+            </div>
+          </div>
+          <div className="col-span-12 lg:col-span-7">
+            <SpecRows rows={materialen} />
+          </div>
+        </div>
+      </section>
+
+      <section data-section="verbanden" className="border-t border-voeg">
         <div className="mx-auto max-w-[1180px] px-5 py-16">
           <p className="font-mono text-[11px] tracking-[0.16em] uppercase">Verbanden · opties</p>
           <h2 className="mt-3 max-w-[18ch] text-4xl">Hoe de stenen in elkaar grijpen</h2>
@@ -131,11 +171,11 @@ export default function SierbestratingPage() {
         </div>
       </section>
 
-      <section data-section="werkwijze" className="border-t border-voeg">
+      <section data-section="werkwijze" className="border-t border-voeg bg-basalt text-wit">
         <div className="mx-auto max-w-[1180px] px-5 py-16">
           <p className="font-mono text-[11px] tracking-[0.16em] uppercase">Werkwijze</p>
           <h2 className="mt-3 text-4xl">U kiest, ik leg</h2>
-          <ol className="mt-8 border-t border-basalt">
+          <ol className="mt-8 border-t border-zandlaag">
             <li className="grid grid-cols-12 gap-4 border-b border-voeg py-4">
               <p className="col-span-12 font-mono text-[11px] tracking-[0.14em] uppercase sm:col-span-3">Advies</p>
               <p className="col-span-12 sm:col-span-9">Ik kom kijken en bespreek met u wat het pad of het terras moet kunnen: lopen, zitten, een auto, een bocht om de border.</p>
@@ -182,6 +222,7 @@ export default function SierbestratingPage() {
         </div>
       </section>
 
+      <Bladwijzer current="/sierbestrating" />
       <ContactForm intro="Wilt u een terras, een pad of een oprit? Beschrijf kort de plek. Ik kom kijken en maak een heldere offerte." />
     </main>
   );

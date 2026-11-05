@@ -117,7 +117,28 @@ export const content = {
     },
   ],
 
-  styles: ["Landelijk", "Romantisch", "Klassiek", "Strak en modern", "Speels en levendig"],
+  styles: [
+    {
+      name: "Landelijk",
+      text: "Lossere lijnen, ruimte voor beplanting die mag groeien, en materiaal dat mag verweren. De tuin hoeft niet strak te blijven.",
+    },
+    {
+      name: "Romantisch",
+      text: "Bloei, een bocht in het pad, een zitplek tussen het groen. De lijn is zachter dan bij een klassieke as.",
+    },
+    {
+      name: "Klassiek",
+      text: "Hagen, een duidelijke as, herhaling. Rust door orde: terras, pad en border liggen op elkaar.",
+    },
+    {
+      name: "Strak en modern",
+      text: "Rechte lijnen, weinig soorten, het terras als een vlak. De beplanting doet het werk in de randen.",
+    },
+    {
+      name: "Speels en levendig",
+      text: "Wisselende hoogtes, kleur in de border, een onverwachte hoek. Nog steeds met maatvoering, anders wordt het rommelig.",
+    },
+  ],
 
   phases: [
     {
@@ -147,14 +168,20 @@ export const content = {
   ],
 
   onderhoud: [
-    "Bladruimen",
-    "Onkruidvrij maken",
-    "Heesters en struiken snoeien",
-    "Bomen snoeien",
-    "Bomen kappen",
-    "Gras maaien",
-    "Beplanten",
-    "Border onderhoud",
+    { task: "Bladruimen", text: "Blad van het gazon, van het pad en uit de border, zodat de tuin niet dichtslaat." },
+    { task: "Onkruidvrij maken", text: "Borders en verharding, voordat het onkruid de beplanting of de voeg overneemt." },
+    { task: "Heesters en struiken snoeien", text: "Op het moment dat de struik het vraagt, in de vorm die bij de tuin hoort." },
+    { task: "Bomen snoeien", text: "Takken die in de weg zitten, of een kroon die uit evenwicht raakt." },
+    { task: "Bomen kappen", text: "Als een boom weg moet, haal ik hem weg. Dat is vakwerk, geen klus voor tussendoor." },
+    { task: "Gras maaien", text: "Het gazon bijhouden, zodat het vlak blijft meedoen in de tuin." },
+    { task: "Beplanten", text: "Nieuwe planten waar een gat is gevallen, of een border die weer body nodig heeft." },
+    { task: "Border onderhoud", text: "Scheuren, aanbinden, uitgebloeide stengels, en de rand langs de bestrating." },
+  ],
+  seizoenen: [
+    { label: "Voorjaar", text: "Heesters snoeien, borders op orde brengen, gaten beplanten." },
+    { label: "Zomer", text: "Gras maaien en onkruidvrij houden, zolang de tuin doorgroeit." },
+    { label: "Najaar", text: "Bladruimen en de border nalopen voordat het natte seizoen begint." },
+    { label: "Winter", text: "Bomen snoeien of kappen, als de boom het toelaat." },
   ],
 
   vorm: {
