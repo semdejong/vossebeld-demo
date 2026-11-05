@@ -109,7 +109,7 @@ export default function Gallery({
         {shown.map((photo, i) => (
           <figure
             key={photo.src}
-            className={`gallery-item border border-voeg bg-wit ${useMosaic && i === 0 ? "md:col-span-2 md:row-span-2" : ""} ${useMosaic && i === 1 ? "md:col-span-2" : ""}`}
+            className={`gallery-item border border-voeg bg-wit text-basalt ${useMosaic && i === 0 ? "md:col-span-2" : ""} ${useMosaic && i === 1 ? "md:col-span-2" : ""}`}
           >
             <button
               type="button"

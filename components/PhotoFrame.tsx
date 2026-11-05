@@ -20,7 +20,7 @@ export default function PhotoFrame({
   className?: string;
 }) {
   return (
-    <figure className={`max-w-[900px] border border-voeg bg-wit ${className}`}>
+    <figure className={`max-w-[900px] border border-voeg bg-wit text-basalt ${className}`}>
       <div className="relative" style={{ aspectRatio: `${width} / ${height}` }}>
         <Image src={src} alt={alt} fill sizes={sizes} priority={priority} className="object-cover" />
       </div>

@@ -198,6 +198,4 @@ h4 {
 }
 
 .gallery-item {
-  content-visibility: auto;
-  contain-intrinsic-size: 240px;
 }
