@@ -61,7 +61,7 @@ export default function ContactForm({
             </div>
             <div>
               <dt className="font-mono text-[11px] tracking-[0.14em] text-zandlaag uppercase">E-mail</dt>
-              <dd className="mt-1 break-all">
+              <dd className="mt-1 break-words">
                 <a href={`mailto:${content.contact.email}`} data-cta="mailen" className="underline decoration-voeg underline-offset-4">
                   {content.contact.email}
                 </a>
@@ -164,7 +164,7 @@ export default function ContactForm({
           </label>
 
           <div className="mt-4">
-            <span className="font-mono text-[11px] tracking-[0.14em] uppercase">Foto, optioneel</span>
+            <p className="font-mono text-[11px] tracking-[0.14em] uppercase">Foto, optioneel</p>
             <label className="mt-2 inline-flex min-h-11 cursor-pointer items-center bg-wit px-4 text-basalt">
               <input
                 name="foto"

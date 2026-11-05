@@ -37,6 +37,42 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Grid items default to min-content and a long e-mail then pushes the whole page past the screen. */
+.grid > * {
+  min-width: 0;
+}
+
+/* Twelve columns keep eleven gaps. gap-8 and gap-10 then exceed a phone, so the page scrolls sideways. */
+@media (max-width: 1023px) {
+  .grid-cols-12 {
+    column-gap: 0.75rem !important;
+  }
+}
+
+[data-section] {
+  scroll-margin-top: 7.5rem;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details .mark-open {
+  display: none;
+}
+
+details[open] .mark-closed {
+  display: none;
+}
+
+details[open] .mark-open {
+  display: inline;
+}
+
 body {
   background: var(--straatzand);
   color: var(--basalt);

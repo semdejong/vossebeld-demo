@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function MobileBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 md:hidden" data-section="belbalk">
+    <div className="fixed inset-x-0 bottom-0 z-40 grid w-full max-w-full grid-cols-2 md:hidden" data-section="belbalk">
       <a
         href={content.contact.phoneTel}
         data-cta="bellen"

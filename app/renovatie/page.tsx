@@ -59,7 +59,7 @@ export default function RenovatiePage() {
   return (
     <main id="inhoud" className="flex-1">
       <section data-section="hero">
-        <div className="mx-auto grid max-w-[1180px] grid-cols-12 items-end gap-8 px-5 py-12 lg:py-16">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-12 items-center gap-8 px-5 py-12 lg:py-16">
           <div className="col-span-12 lg:col-span-7">
             <p className="font-mono text-[12px] tracking-[0.16em] uppercase">Renovatie · Haaksbergen</p>
             <h1 className="mt-4 max-w-[16ch] text-5xl font-extrabold">De tuin opnieuw, met wat goed is gebleven.</h1>

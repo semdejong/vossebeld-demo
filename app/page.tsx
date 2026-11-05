@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main id="inhoud" className="flex-1">
       <section data-section="hero">
-        <div className="mx-auto grid max-w-[1180px] grid-cols-12 items-end gap-8 px-5 py-12 lg:py-20">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-12 items-center gap-8 px-5 py-12 lg:py-20">
           <div className="col-span-12 lg:col-span-7">
             <p className="font-mono text-[12px] tracking-[0.16em] uppercase">{content.company.regionLabel}</p>
             <h1 className="mt-4 max-w-[16ch] text-[2.6rem] leading-[1.02] font-extrabold sm:text-6xl">
@@ -33,8 +33,8 @@ export default function Home() {
             <p className="mt-6 max-w-[40rem]">
               Ik ben Peter Vossebeld. Vanuit Haaksbergen ontwerp, leg ik aan en onderhoud ik tuinen, voornamelijk in Twente en de Achterhoek. U heeft aan mij één aanspreekpunt. Vooraf krijgt u een heldere offerte, zodat u weet welke werkzaamheden erin zitten en wat ze kosten.
             </p>
-            <p className="mt-6 font-display text-3xl font-bold">
-              <a href={content.contact.phoneTel} data-cta="bellen" className="underline decoration-klinker decoration-2 underline-offset-4">
+            <p className="mt-6">
+              <a href={content.contact.phoneTel} data-cta="bellen" className="inline-flex min-h-11 items-center font-display text-3xl font-bold underline decoration-klinker decoration-2 underline-offset-4">
                 {content.contact.phoneDisplay}
               </a>
             </p>
@@ -172,13 +172,14 @@ export default function Home() {
               Naar het ontwerp
             </Link>
           </div>
-          <ul className="mt-8 border-t border-basalt lg:grid lg:grid-cols-5">
+          <div className="mt-8 border-t border-basalt">
             {content.styles.map((style) => (
-              <li key={style.name} className="border-b border-voeg py-4 lg:border-r lg:border-b-0 lg:px-4 lg:first:pl-0 lg:last:border-r-0">
-                <p className="font-display text-xl font-bold">{style.name}</p>
-              </li>
+              <Link key={style.name} href="/ontwerp#stijlen" className="grid grid-cols-12 gap-3 border-b border-voeg py-4">
+                <span className="col-span-12 font-display text-2xl font-bold sm:col-span-4">{style.name}</span>
+                <span className="col-span-12 sm:col-span-8">{style.text}</span>
+              </Link>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
@@ -198,8 +199,8 @@ export default function Home() {
             </p>
             <p className="grid grid-cols-12 gap-3 border-b border-voeg py-4">
               <span className="col-span-12 font-mono text-[11px] tracking-[0.14em] uppercase sm:col-span-3">Mailen</span>
-              <a href={`mailto:${content.contact.email}`} data-cta="mailen" className="col-span-12 underline decoration-voeg underline-offset-4 sm:col-span-9">
-                {content.contact.email}
+              <a href={`mailto:${content.contact.email}`} data-cta="mailen" className="col-span-12 break-words underline decoration-voeg underline-offset-4 sm:col-span-9">
+                info@<wbr />hoveniersbedrijfvossebeld.nl
               </a>
             </p>
             <p className="grid grid-cols-12 gap-3 border-b border-voeg py-4">

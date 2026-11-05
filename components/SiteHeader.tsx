@@ -57,7 +57,7 @@ export default function SiteHeader() {
           >
             <button
               type="button"
-              className={`inline-flex min-h-11 items-center gap-2 px-3 ${onService ? "bg-straatzand" : ""}`}
+              className={`inline-flex min-h-11 items-center gap-2 border-b-2 px-3 ${onService ? "border-klinker" : "border-transparent"}`}
               aria-expanded={diensten}
               aria-controls={dienstenId}
               onClick={() => setDiensten((v) => !v)}
@@ -83,13 +83,13 @@ export default function SiteHeader() {
               </div>
             ) : null}
           </div>
-          <Link href="/projecten" aria-current={path === "/projecten" ? "page" : undefined} className="inline-flex min-h-11 items-center px-3 hover:bg-straatzand">
+          <Link href="/projecten" aria-current={path === "/projecten" ? "page" : undefined} className={`inline-flex min-h-11 items-center border-b-2 px-3 hover:bg-straatzand ${path === "/projecten" ? "border-klinker" : "border-transparent"}`}>
             Projecten
           </Link>
-          <Link href="/over-peter" aria-current={path === "/over-peter" ? "page" : undefined} className="inline-flex min-h-11 items-center px-3 hover:bg-straatzand">
+          <Link href="/over-peter" aria-current={path === "/over-peter" ? "page" : undefined} className={`inline-flex min-h-11 items-center border-b-2 px-3 hover:bg-straatzand ${path === "/over-peter" ? "border-klinker" : "border-transparent"}`}>
             Over Peter
           </Link>
-          <Link href="/contact" aria-current={path === "/contact" ? "page" : undefined} className="inline-flex min-h-11 items-center px-3 hover:bg-straatzand">
+          <Link href="/contact" aria-current={path === "/contact" ? "page" : undefined} className={`inline-flex min-h-11 items-center border-b-2 px-3 hover:bg-straatzand ${path === "/contact" ? "border-klinker" : "border-transparent"}`}>
             Contact
           </Link>
         </nav>
@@ -117,13 +117,13 @@ export default function SiteHeader() {
         <nav id={menuId} aria-label="Mobiel menu" className="border-t border-voeg bg-wit px-4 py-2 lg:hidden">
           <p className="px-1 pt-3 font-mono text-[11px] tracking-[0.16em] uppercase">Diensten</p>
           {services.map((s) => (
-            <Link key={s.href} href={s.href} className="flex min-h-11 items-center border-b border-voeg px-1">
+            <Link key={s.href} href={s.href} aria-current={path === s.href ? "page" : undefined} className={`flex min-h-11 items-center border-b border-voeg px-1 ${path === s.href ? "border-l-2 border-l-klinker pl-3" : ""}`}>
               {s.title}
             </Link>
           ))}
-          <Link href="/projecten" className="flex min-h-11 items-center border-b border-voeg px-1">Projecten</Link>
-          <Link href="/over-peter" className="flex min-h-11 items-center border-b border-voeg px-1">Over Peter</Link>
-          <Link href="/contact" className="flex min-h-11 items-center px-1">Contact</Link>
+          <Link href="/projecten" aria-current={path === "/projecten" ? "page" : undefined} className={`flex min-h-11 items-center border-b border-voeg px-1 ${path === "/projecten" ? "border-l-2 border-l-klinker pl-3" : ""}`}>Projecten</Link>
+          <Link href="/over-peter" aria-current={path === "/over-peter" ? "page" : undefined} className={`flex min-h-11 items-center border-b border-voeg px-1 ${path === "/over-peter" ? "border-l-2 border-l-klinker pl-3" : ""}`}>Over Peter</Link>
+          <Link href="/contact" aria-current={path === "/contact" ? "page" : undefined} className={`flex min-h-11 items-center px-1 ${path === "/contact" ? "border-l-2 border-l-klinker pl-3" : ""}`}>Contact</Link>
         </nav>
       ) : null}
       <LayerRule />

@@ -75,7 +75,7 @@ export default function OntwerpPage() {
   return (
     <main id="inhoud" className="flex-1">
       <section data-section="hero">
-        <div className="mx-auto grid max-w-[1180px] grid-cols-12 items-end gap-8 px-5 py-12 lg:py-16">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-12 items-center gap-8 px-5 py-12 lg:py-16">
           <div className="col-span-12 lg:col-span-7">
             <p className="font-mono text-[12px] tracking-[0.16em] uppercase">Ontwerp · Haaksbergen</p>
             <h1 className="mt-4 max-w-[14ch] text-5xl font-extrabold">Eerst de tuin tekenen.</h1>
@@ -85,7 +85,7 @@ export default function OntwerpPage() {
             <p className="mt-4 max-w-[40rem]">
               U praat met mij. Van idee tot tuin blijft één lijn: de tekening en de aanleg komen uit dezelfde hand.
             </p>
-            <Maatlijn caption="Maatlijn · de echte maten komen uit de tuin, niet uit dit blad" />
+            <Maatlijn caption="Maatlijn · de maten komen uit de tuin" />
             <Link href="#tuin-bespreken" data-cta="offerte" className="mt-6 inline-flex min-h-11 items-center bg-klinker px-5 font-semibold text-white">
               Tuin bespreken
             </Link>

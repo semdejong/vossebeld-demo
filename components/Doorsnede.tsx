@@ -92,7 +92,10 @@ export default function Doorsnede() {
             <ol className="mt-3 border-t border-basalt">
               {content.phases.map((phase) => (
                 <li key={phase.key} className="border-b border-voeg py-4">
-                  <p className="font-mono text-[11px] tracking-[0.14em] uppercase">{phase.name} · {phase.title}</p>
+                  <p className="flex items-center gap-3 font-mono text-[11px] tracking-[0.14em] uppercase">
+                    <span aria-hidden className="h-px w-8 shrink-0" style={{ background: tone[phase.key]?.bg ?? "currentColor" }} />
+                    {phase.name} · {phase.title}
+                  </p>
                   <p className="mt-2">{phase.text}</p>
                 </li>
               ))}

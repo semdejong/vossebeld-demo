@@ -64,8 +64,8 @@ export default function ContactPage() {
             <div className="grid grid-cols-12 gap-3 border-b border-voeg px-4 py-3">
               <dt className="col-span-4 font-mono text-[11px] tracking-[0.14em] uppercase">E-mail</dt>
               <dd className="col-span-8">
-                <a href={`mailto:${content.contact.email}`} data-cta="mailen" className="underline decoration-voeg underline-offset-4">
-                  {content.contact.email}
+                <a href={`mailto:${content.contact.email}`} data-cta="mailen" className="break-words underline decoration-voeg underline-offset-4">
+                  info@<wbr />hoveniersbedrijfvossebeld.nl
                 </a>
               </dd>
             </div>

@@ -1,4 +1,4 @@
-export default function Maatlijn({ caption = "Maatlijn · schetsmatig, geen schaal van een tuin" }: { caption?: string }) {
+export default function Maatlijn({ caption = "Maatlijn · schetsmatig" }: { caption?: string }) {
   return (
     <div className="mt-8 max-w-sm">
       <div className="flex h-3 items-end border-b border-basalt" aria-hidden>

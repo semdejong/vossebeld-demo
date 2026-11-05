@@ -22,12 +22,12 @@ export default function SiteFooter() {
         <div>
           <p className="font-mono text-[11px] tracking-[0.16em] uppercase text-zandlaag">Contact</p>
           <p className="mt-3">
-            <a href={contact.phoneTel} data-cta="bellen" className="underline decoration-voeg underline-offset-4">
+            <a href={contact.phoneTel} data-cta="bellen" className="inline-flex min-h-11 items-center underline decoration-voeg underline-offset-4">
               {contact.phoneDisplay}
             </a>
           </p>
           <p className="mt-2">
-            <a href={`mailto:${contact.email}`} data-cta="mailen" className="underline decoration-voeg underline-offset-4">
+            <a href={`mailto:${contact.email}`} data-cta="mailen" className="inline-flex min-h-11 items-center underline decoration-voeg underline-offset-4">
               info@<wbr />hoveniersbedrijfvossebeld.nl
             </a>
           </p>

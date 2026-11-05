@@ -15,7 +15,7 @@ export default function Bladwijzer({ current }: { current: string }) {
             <Link
               key={service.href}
               href={service.href}
-              className="grid grid-cols-[3.5rem_1fr] items-center gap-3 border-b border-voeg py-4 sm:px-4 sm:odd:border-r"
+              className="grid min-h-11 grid-cols-[3.5rem_1fr] items-center gap-3 border-b border-voeg py-4 sm:px-4 sm:odd:border-r sm:last:border-r-0"
             >
               <BondSwatch bond={service.bond} className="h-14 w-14 border border-voeg" />
               <span>

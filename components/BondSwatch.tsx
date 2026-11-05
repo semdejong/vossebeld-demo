@@ -19,7 +19,7 @@ export default function BondSwatch({
   const item = file[bond];
   if (bond === "elleboog") {
     return (
-      <div role="img" aria-label={item.label} className={`relative overflow-hidden bg-straatzand ${className}`}>
+      <div role="img" aria-label={item.label} className={`relative overflow-clip bg-straatzand ${className}`} style={{ contain: "paint" }}>
         <div
           aria-hidden
           className="absolute top-1/2 left-1/2 h-[720px] w-[720px]"

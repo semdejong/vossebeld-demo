@@ -1,6 +1,7 @@
 import Bladwijzer from "@/components/Bladwijzer";
 import BondSwatch from "@/components/BondSwatch";
 import ContactForm from "@/components/ContactForm";
+import FaqList from "@/components/FaqList";
 import Gallery from "@/components/Gallery";
 import PhotoFrame from "@/components/PhotoFrame";
 import SpecRows from "@/components/SpecRows";
@@ -85,7 +86,7 @@ export default function SierbestratingPage() {
   return (
     <main id="inhoud" className="flex-1">
       <section data-section="hero">
-        <div className="mx-auto grid max-w-[1180px] grid-cols-12 items-end gap-8 px-5 py-12 lg:py-16">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-12 items-center gap-8 px-5 py-12 lg:py-16">
           <div className="col-span-12 lg:col-span-6">
             <p className="font-mono text-[12px] tracking-[0.16em] uppercase">Sierbestrating · Haaksbergen</p>
             <h1 className="mt-4 text-5xl font-extrabold sm:text-6xl">Bestrating die de tuin draagt.</h1>
@@ -209,15 +210,8 @@ export default function SierbestratingPage() {
       <section data-section="faq" className="border-t border-voeg">
         <div className="mx-auto max-w-[1180px] px-5 py-16">
           <h2 className="text-4xl">Vragen</h2>
-          <div className="mt-6 border-t border-basalt">
-            {faq.map((item) => (
-              <details key={item.q} className="border-b border-voeg">
-                <summary className="flex min-h-11 cursor-pointer items-center py-3 font-display text-xl font-bold">
-                  {item.q}
-                </summary>
-                <p className="max-w-[44rem] pb-4">{item.a}</p>
-              </details>
-            ))}
+          <div className="mt-6">
+            <FaqList items={faq} />
           </div>
         </div>
       </section>
